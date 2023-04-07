@@ -2,12 +2,13 @@ version: "3.7"
 
 services:
   node-red:
-    container_name: jetson_adderss_forwarding
+    container_name: jetson_address_forwarding
     build : .
     environment:
       - TZ=Europe/Amsterdam
     ports:
       - "1880:1880"
+      - "2020:2020"
     networks:
       - node-red-net
     volumes:
